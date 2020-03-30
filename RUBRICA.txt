@@ -1,0 +1,71 @@
+Pol Brunet Font
+
+Puntos implementados:
+
+1. Landscape: He creado un landscape con dos tipos de materiales y he añadido vegetación
+con la herramineta Fooliage.
+
+2. Tres nuevos Inputs: Los inputs están descritos en el HUD, pero también los describiré
+aquí.
+
+	- Crouch: Con la tecla LShift te permite agacharte, pero al estar agachado no
+		puedes moverte.
+
+	- Restart: Con la tecla R te permite recargar el mapa.
+
+	- HealthTest: Con la tecla T pierdes 10 de 100 de vida totales. Sirve para testear
+		la vida.
+
+3. Tres triggers que son:
+
+	- Item: Una llave que el HUD cuenta al cogerla.
+
+	- Puerta: Se abre con 4 llaves.
+
+	- Deadzone: Al entrar en contacto con el player, su vida se coloca en 0.
+
+4. Luces: El escenario dispone de 3 tipos de luces distintas:
+
+	- Directional Light.
+
+	- Rect Light en el lago de lava (Deadzone).
+
+	- Point Light que está en la puerta.
+
+	El ciclo de dia/noche está codeado en el level blueprint.
+
+5. HUD muestra:
+
+	- Las llaves que lleva el jugador.
+
+	- Su vida en forma de progressbar.
+
+	- El tiempo que lleva desde que el juego ha iniciado.
+
+6. El HUD contiene 2 animaciones:
+
+	- Las keys al iniciarse el juego salen por la izquierda.
+
+	- La vida del jugador sale por arriba al iniciarse el juego.
+
+7. Añadir 2 estados en el AnimationBP.
+
+	- IdleCrouch: Al puslar shift puedes agacharte.
+
+	- Death: Al llegar a 0 de vida el jugador muere.
+
+8. Crear y lanzar un sonido (el sonido pertenece a la llave, cuando 
+la coges) que tenga:
+
+	- Sonido random entre 2.
+
+	- Pitch distinto.
+
+	- (EXTRA) A más cuando el player muere se reproduce en un notify de su animación
+		un sonido de muerte.
+
+9. Funcionalidad del Level Blueprint:
+
+	- Contiene Restart Game.
+
+
